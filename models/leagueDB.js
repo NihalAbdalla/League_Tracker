@@ -9,7 +9,7 @@ const leaguesSchema = new Leagues({
         type:String,
     },
     image:{
-        type: "URL",
+        type: String,
     },
 });
 
@@ -22,7 +22,7 @@ const teamsSchema = new Leagues({
         type:String,
     },
     image:{
-        type: "URL",
+        type: String,
     },
     leaguekey:{
         type:String,
@@ -74,7 +74,7 @@ const playerSchema = new mongoose.Schema({
   },
 
   image:{
-      type: "URL",
+      type: String,
   },
 
   position:{
@@ -97,7 +97,7 @@ const playerSchema = new mongoose.Schema({
 
 
 const leagues = mongoose.model("Leagues", leaguesSchema);
-const Teams = mongoose.model("Teams", teamsSchemaa);
+const Teams = mongoose.model("Teams", teamsSchema);
 const Player = mongoose.model("Player", playerSchema);
 
 module.exports = leagues;
